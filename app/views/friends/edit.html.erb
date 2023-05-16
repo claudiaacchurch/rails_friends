@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-header">
+<h1>Edit friend</h1>
+</div>
+
+<br />
+<div class="card-body">
+<%= render "form", friend: @friend %>
+
+
+<br />
+</div>
+</div>
+<br />
+<div>
+  <div><%= link_to "Show friend", @friend %> </div>
+  <div><%= link_to "Back", :back %></div>
+  <div>
+             <%= button_to "Delete friend", @friend, method: :delete, data: { controller: "confirm", action: "click->confirm#delete" }, class:"btn btn-danger" %>
+          </div>
+</div>
